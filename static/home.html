@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSKAR — OPO's Smart Knowledge Assistant & Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* ── Animations ── */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Hero Section ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px;
+        }
+
+        .hero-logo {
+            width: 200px;
+            animation: fadeIn 1s ease-out, float 4s ease-in-out 1s infinite;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 24px;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: #c8a84e;
+            margin-top: 8px;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            font-weight: 300;
+            color: #555;
+            max-width: 640px;
+            margin-top: 20px;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.7s both;
+        }
+
+        /* ── Video Section ── */
+        .video-section {
+            padding: 40px 24px 80px;
+            display: flex;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.9s both;
+        }
+
+        .video-section video {
+            max-width: 800px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(200, 168, 78, 0.18), 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        /* ── Section Common ── */
+        .section {
+            padding: 80px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #1a1a1a;
+        }
+
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: #c8a84e;
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ── Features Section ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .feature-card {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 32px 28px;
+            border-left: 4px solid #c8a84e;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .feature-card.visible {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(200, 168, 78, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon i {
+            font-size: 18px;
+            color: #c8a84e;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ── Stats Section ── */
+        .stats-section {
+            background: #fafafa;
+            padding: 80px 24px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #c8a84e;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #777;
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        /* ── Get Started Section ── */
+        .cta-section {
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            background: #c8a84e;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #b8963e;
+            transform: scale(1.02);
+        }
+
+        .cta-subtext {
+            font-size: 14px;
+            color: #999;
+            margin-top: 16px;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .section-heading {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="assets/OSKAR Logo.png" alt="OSKAR Logo" class="hero-logo">
+        <h1 class="hero-title">OSKAR</h1>
+        <p class="hero-subtitle">OPO's Smart Knowledge Assistant &amp; Researcher</p>
+        <p class="hero-description">A specialized AI assistant that leverages OPO departmental knowledge to provide instant, grounded, and accurate responses using RAG &amp; Generative AI.</p>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <video controls>
+            <source src="assets/OSKAR Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <h2 class="section-heading">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card" data-delay="0">
+                <div class="feature-icon"><i class="fas fa-database"></i></div>
+                <h3>OPO Knowledge Integration</h3>
+                <p>Quick access to OPMPs, IMPs, Work Instructions, Cookbooks, MMPs, QMSP, AS9100D &amp; ISO 19011</p>
+            </div>
+            <div class="feature-card" data-delay="1">
+                <div class="feature-icon"><i class="fas fa-search"></i></div>
+                <h3>Instant Search &amp; Retrieval</h3>
+                <p>Search through ingested OPO information and get answers in seconds with linked sources</p>
+            </div>
+            <div class="feature-card" data-delay="2">
+                <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Document Analyzer</h3>
+                <p>Compare &amp; analyze documents, identify errors, check compliance issues, and suggest improvements</p>
+            </div>
+            <div class="feature-card" data-delay="3">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>RLPM Compliance</h3>
+                <p>Analyze procedures for RLPM compliance against GCP-59 stages and gate requirements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+                <div class="stat-label">Time Reduction in Search</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="96" data-suffix="%">0%</div>
+                <div class="stat-label">Answer Accuracy</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="3.5" data-suffix=" min" data-decimal="true">0 min</div>
+                <div class="stat-label">Average Search (was 3.6 hrs)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="cta-section">
+        <button class="cta-button" onclick="window.location.href='landing.html'">Get Started</button>
+        <p class="cta-subtext">Begin your AI-powered workflow</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">Powered by OPO AI Strategy</footer>
+
+    <script>
+        // Intersection Observer for feature cards (staggered slide-up)
+        const featureCards = document.querySelectorAll('.feature-card');
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = parseInt(entry.target.dataset.delay) * 0.15;
+                    entry.target.style.animationDelay = delay + 's';
+                    entry.target.classList.add('visible');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        featureCards.forEach(card => cardObserver.observe(card));
+
+        // Count-up animation for stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let statsAnimated = false;
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsAnimated) {
+                    statsAnimated = true;
+                    animateStats();
+                    statsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelector('.stats-section') && statsObserver.observe(document.querySelector('.stats-section'));
+
+        function animateStats() {
+            statNumbers.forEach(el => {
+                const target = parseFloat(el.dataset.target);
+                const suffix = el.dataset.suffix || '';
+                const isDecimal = el.dataset.decimal === 'true';
+                const duration = 1600;
+                const start = performance.now();
+
+                function update(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = isDecimal
+                        ? (target * eased).toFixed(1)
+                        : Math.round(target * eased);
+                    el.textContent = current + suffix;
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+    </script>
+</body>
+</html>

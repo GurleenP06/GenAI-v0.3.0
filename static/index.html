@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>OSKAR - OPO GenAI Chat Tool</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-chevron-left" id="toggle-icon"></i>
+      </div>
+
+      <div class="sidebar-header">
+        <div class="logo">OSKAR</div>
+      </div>
+
+      <div class="chat-sections">
+        <div class="chat-section">
+          <div class="section-title">Favorites</div>
+          <div id="favoritesList"></div>
+        </div>
+
+        <div class="chat-section">
+          <div class="section-title">Recent</div>
+          <div id="recentList"></div>
+        </div>
+
+        <div class="chat-section">
+          <div class="section-title">All Chats</div>
+          <div id="allChatsList"></div>
+        </div>
+      </div>
+
+      <button class="new-chat" onclick="startNewChat()">
+        <span id="newChatText">New Chat</span>
+      </button>
+    </aside>
+
+    <main class="main">
+      <div class="section-tabs">
+        <button class="section-tab active" data-section="rlpm" onclick="selectSection('rlpm')">RLPM Assistant</button>
+        <button class="section-tab" data-section="standard" onclick="selectSection('standard')">Standard Assistant</button>
+      </div>
+
+      <header class="header">
+        <div class="header-left">
+          <div class="chat-title" id="chatTitle">New Chat</div>
+          <div class="assistant-tabs" id="assistantTabs">
+            <!-- Populated by JS based on active section -->
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <div class="model-selector">
+            <span class="status-indicator connected" id="ollamaStatus"></span>
+            <label>Model:</label>
+            <select id="modelSelect" onchange="changeModel(this.value)">
+              <option value="mistral">Mistral 7B</option>
+              <option value="llama3.1">Llama 3.1 8B</option>
+              <option value="mistral-nemo">Mistral Nemo 12B</option>
+              <option value="llama3-chatqa">Llama3 ChatQA 8B</option>
+            </select>
+          </div>
+          <button class="header-btn" onclick="showRenameModal()"><i class="fas fa-edit"></i> Rename</button>
+          <div class="dropdown">
+            <button class="header-btn"><i class="fas fa-download"></i> Export</button>
+            <div class="dropdown-content">
+              <div class="dropdown-item" onclick="exportChat('txt')">Export as TXT</div>
+              <div class="dropdown-item" onclick="exportChat('docx')">Export as DOCX</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="welcome" id="welcome">
+          <h1 id="welcomeTitle">OSKAR</h1>
+          <p id="welcomeDescription">Operations Support Knowledge Assistant with RAG - Select a prompt below or type your own question</p>
+
+          <div class="prompts-grid" id="promptsGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="messages-inner" id="messagesInner"></div>
+        </div>
+
+        <div class="thinking" id="thinking">Processing...</div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <input type="text" class="input-field" id="inputField" placeholder="Type your message..." />
+          <button class="send-button" id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="renameModal">
+    <div class="modal-content" style="width: 400px; height: auto;">
+      <div class="modal-header">
+        <h3 class="modal-title">Rename Chat</h3>
+      </div>
+      <div class="modal-body" style="padding: 20px; background: white;">
+        <input type="text" class="modal-input" id="newChatName" placeholder="Enter new name..."
+               style="width: 100%; padding: 8px 12px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; outline: none;" />
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" onclick="closeRenameModal()">Cancel</button>
+        <button class="modal-btn modal-btn-primary" onclick="saveNewName()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="documentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="documentTitle">Document Viewer</h3>
+      </div>
+      <div class="modal-body">
+        <iframe id="documentFrame"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" onclick="downloadDocument()">Download</button>
+        <button class="modal-btn" onclick="closeDocumentModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/ui/session.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/ui/sidebar.js"></script>
+  <script src="js/ui/messages.js"></script>
+  <script src="js/ui/welcome.js"></script>
+  <script src="js/ui/modals.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

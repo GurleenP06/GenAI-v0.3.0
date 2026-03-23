@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSKAR — Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    .landing-container {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 48px 40px;
+      gap: 56px;
+    }
+
+    /* ---------- Left Column ---------- */
+    .left-col {
+      flex: 0 0 57%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .logo-area img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .logo-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #c8a84e 0%, #e2c972 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    /* Form fields */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      color: #1a1a1a;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input::placeholder {
+      color: #aaa;
+    }
+
+    .form-group input:focus {
+      border-color: #c8a84e;
+      box-shadow: 0 0 0 3px rgba(200, 168, 78, 0.12);
+      background: #fff;
+    }
+
+    /* Tips section */
+    .tips-heading {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .tip-card {
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-left: 3px solid #c8a84e;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #444;
+      transition: box-shadow 0.2s;
+    }
+
+    .tip-card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .tip-card strong {
+      display: block;
+      color: #1a1a1a;
+      font-weight: 600;
+      margin-bottom: 3px;
+      font-size: 13px;
+    }
+
+    /* ---------- Right Column ---------- */
+    .right-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeIn 0.6s ease 0.2s both;
+    }
+
+    .agreement-heading {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+    }
+
+    .disclaimer-box {
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 22px 24px;
+      background: #fafafa;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer-box::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .disclaimer-box::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .disclaimer-box::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .disclaimer-box p {
+      margin-bottom: 12px;
+    }
+
+    .disclaimer-box ul {
+      margin: 8px 0 12px 20px;
+    }
+
+    .disclaimer-box ul li {
+      margin-bottom: 6px;
+    }
+
+    .disclaimer-box strong {
+      color: #1a1a1a;
+    }
+
+    /* Agree button */
+    #landingAgreeBtn {
+      width: 100%;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      background: #c8a84e;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.2px;
+    }
+
+    #landingAgreeBtn:hover:not(:disabled) {
+      background: #b5953f;
+      transform: translateY(-1px);
+    }
+
+    #landingAgreeBtn:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    #landingAgreeBtn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .landing-container {
+        flex-direction: column;
+        padding: 32px 20px;
+        gap: 36px;
+      }
+
+      .left-col {
+        flex: none;
+      }
+
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .disclaimer-box {
+        max-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="landing-container">
+
+    <!-- Left Column -->
+    <div class="left-col">
+      <div class="logo-area">
+        <div class="logo-placeholder">O</div>
+        <div>
+          <h1>Welcome to OSKAR</h1>
+          <p class="subtitle">Please enter your information to get started</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="landingName">Full Name</label>
+        <input type="text" id="landingName" placeholder="Enter your full name" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="landingRole">Role</label>
+        <input type="text" id="landingRole" placeholder="Enter your role (e.g., Engineer, Manager)" autocomplete="organization-title">
+      </div>
+
+      <div class="tips-heading"><i class="fa-solid fa-lightbulb" style="color:#c8a84e;margin-right:6px;"></i>Prompting Best Practices</div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <strong>Be specific</strong>
+          Include document names, procedure numbers, or exact topics.
+        </div>
+        <div class="tip-card">
+          <strong>Provide context</strong>
+          Mention the section or standard you're working with.
+        </div>
+        <div class="tip-card">
+          <strong>Ask one question at a time</strong>
+          For focused and accurate answers.
+        </div>
+        <div class="tip-card">
+          <strong>Use follow-up questions</strong>
+          To drill deeper into a topic.
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-col">
+      <h2 class="agreement-heading"><i class="fa-solid fa-shield-halved" style="color:#c8a84e;margin-right:8px;"></i>Usage Agreement</h2>
+
+      <div class="disclaimer-box">
+        <p><strong>Legal guidelines US and Non-US Person users must follow</strong></p>
+        <p>All large language models are susceptible to giving inaccurate or inappropriate responses and may not represent RTX's views or values. Evaluate your received responses against your contextual knowledge, RTX's Core Values, and specifically your knowledge of RTX's Global Corporate Policies (GCP), Functional Corporate Policies (FCP) and GCP-60 "Responsible Artificial Intelligence". OSKAR is meant to be a helpful resource, not a definitive source for information. Consult your Legal or HR resources for further clarification on your specific needs.</p>
+        <p>RTX will retain logs of your inputs to evaluate performance and security.</p>
+        <p><strong>DO NOT</strong> input any of the following categories of information into OSKAR:</p>
+        <ul>
+          <li>Controlled Unclassified Information (CUI) / Covered Defense Information (CDI)</li>
+          <li>Sensitive Personal Information (Business Contact Information is permissible)</li>
+          <li>Technical data</li>
+          <li>Third-party information</li>
+          <li>Data or information that is controlled by a non-U.S. government or jurisdiction, for example, UK Strategic Military Information, EU Restricted Information, or Chinese Important Data</li>
+        </ul>
+        <p><strong>DO NOT</strong> copy and paste documents. Inputs are limited to 4,096 characters or less. Character limitation imposed to restrict potential for transferring technical data/content appropriate for the OSKAR environment.</p>
+        <p>AI-generated content or code <strong>CANNOT</strong> be used or incorporated into RTX products or services without prior approval. This includes externally facing documents or documents that may be revealed to third parties as well as any proposals, deliverables, products, services, or documents that become part of RTX command media, corporate policies, or standard work. RTX knowledge topics are limited by non-technical data content appropriate for the OSKAR environment.</p>
+      </div>
+
+      <button id="landingAgreeBtn" disabled>I Agree &amp; Continue to OSKAR</button>
+    </div>
+
+  </div>
+
+  <script>
+    var API_BASE = '';
+
+    document.getElementById('landingName').addEventListener('input', validateForm);
+    document.getElementById('landingRole').addEventListener('input', validateForm);
+    document.getElementById('landingAgreeBtn').addEventListener('click', submitLanding);
+
+    function validateForm() {
+      var name = document.getElementById('landingName').value.trim();
+      var role = document.getElementById('landingRole').value.trim();
+      document.getElementById('landingAgreeBtn').disabled = !(name && role);
+    }
+
+    async function submitLanding() {
+      var name = document.getElementById('landingName').value.trim();
+      var role = document.getElementById('landingRole').value.trim();
+      var btn = document.getElementById('landingAgreeBtn');
+      btn.disabled = true;
+      btn.textContent = 'Starting...';
+
+      try {
+        var response = await fetch(API_BASE + '/register_session/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, role: role })
+        });
+        var data = await response.json();
+
+        sessionStorage.setItem('oskar_session_id', data.session_id);
+        sessionStorage.setItem('oskar_userName', name);
+        sessionStorage.setItem('oskar_userRole', role);
+
+        window.location.href = 'index.html';
+      } catch (error) {
+        console.error('Registration failed:', error);
+        btn.disabled = false;
+        btn.textContent = 'I Agree & Continue to OSKAR';
+        alert('Failed to connect to OSKAR server. Please ensure the server is running.');
+      }
+    }
+  </script>
+
+</body>
+</html>
