@@ -1,0 +1,1338 @@
+{
+  "OPMP_5_10_CO_Incorp_Mgmt_WEB.txt": [
+    {
+      "abbreviation": "BMC",
+      "full_form": "Bill of Material Change"
+    },
+    {
+      "abbreviation": "BOM",
+      "full_form": "Bill of Material"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "CR",
+      "full_form": "Change Request"
+    },
+    {
+      "abbreviation": "EC",
+      "full_form": "Engineering Change"
+    },
+    {
+      "abbreviation": "CIA",
+      "full_form": "Change Incorporation Analyst"
+    },
+    {
+      "abbreviation": "COID",
+      "full_form": "Change Order Incorporation Data"
+    },
+    {
+      "abbreviation": "Change",
+      "full_form": "Order Incorporation"
+    },
+    {
+      "abbreviation": "DVPM",
+      "full_form": "Design Validation Plan & Memo"
+    },
+    {
+      "abbreviation": "EMM",
+      "full_form": "Escape Management Meeting"
+    },
+    {
+      "abbreviation": "FSC",
+      "full_form": "Factory Standard Cost"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "LCI",
+      "full_form": "Life Cycle Integrator"
+    },
+    {
+      "abbreviation": "LN",
+      "full_form": "Limit Notice"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Product Introduction"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "PLM",
+      "full_form": "Product Lifecycle Management"
+    },
+    {
+      "abbreviation": "RFN",
+      "full_form": "Red Flag Notice"
+    },
+    {
+      "abbreviation": "SAP",
+      "full_form": "System Application Programming"
+    },
+    {
+      "abbreviation": "SB",
+      "full_form": "Service Bulletin"
+    },
+    {
+      "abbreviation": "TCCA",
+      "full_form": "Transport Canada Civil Aviation"
+    },
+    {
+      "abbreviation": "WIP",
+      "full_form": "Work in progress"
+    }
+  ],
+  "OPMP_6_10_Mgmt_of_Delivered_Engines_WEB.txt": [
+    {
+      "abbreviation": "ARC",
+      "full_form": "Authorized Release Certificate"
+    },
+    {
+      "abbreviation": "ATTS",
+      "full_form": "Assembly & Test Technical Support"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "FEP",
+      "full_form": "Fleet Enhancement Program"
+    },
+    {
+      "abbreviation": "FPS",
+      "full_form": "Finished Part Store"
+    },
+    {
+      "abbreviation": "FSR",
+      "full_form": "Field Service Representative"
+    },
+    {
+      "abbreviation": "IMF",
+      "full_form": "Integrated Material Flow"
+    },
+    {
+      "abbreviation": "IO",
+      "full_form": "Internal Order"
+    },
+    {
+      "abbreviation": "ITC",
+      "full_form": "International Trade Compliance"
+    },
+    {
+      "abbreviation": "MRT",
+      "full_form": "Mobile Repair Team"
+    },
+    {
+      "abbreviation": "NOP",
+      "full_form": "New Operations Program requirement in SAP"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Upgrade Plan"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OPMP",
+      "full_form": "Operations Program Management Procedure"
+    },
+    {
+      "abbreviation": "PO",
+      "full_form": "Purchase Order"
+    },
+    {
+      "abbreviation": "QMSP",
+      "full_form": "Quality Management System Procedures"
+    },
+    {
+      "abbreviation": "REC",
+      "full_form": "Return Engine Coordinator"
+    },
+    {
+      "abbreviation": "RECO",
+      "full_form": "Return Engine Change Order"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "SB",
+      "full_form": "Service Bulletin"
+    },
+    {
+      "abbreviation": "SI",
+      "full_form": "Special Instruction"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "An Original Engine Upgrade Plan is used to upgrade parts following a Change Order incorporation that"
+    },
+    {
+      "abbreviation": "of",
+      "full_form": "Airworthiness. The decision to perform an OEUP is taken jointly by Marketing, Engineering and Operations"
+    }
+  ],
+  "OPMP_6_11_NGPF_Return_Engine_Coord_WEB.txt": [
+    {
+      "abbreviation": "AMC",
+      "full_form": "Authorized Manufacturing Centre"
+    },
+    {
+      "abbreviation": "AWM",
+      "full_form": "Airworthiness Manual"
+    },
+    {
+      "abbreviation": "EMM",
+      "full_form": "Engine Maintenance Manual"
+    },
+    {
+      "abbreviation": "FOD",
+      "full_form": "Foreign Object Damage"
+    },
+    {
+      "abbreviation": "PQuad",
+      "full_form": "Power Plant Plus Podding"
+    },
+    {
+      "abbreviation": "MAC",
+      "full_form": "Mirabel Aerospace Centre"
+    },
+    {
+      "abbreviation": "NCR: Non",
+      "full_form": "Conformance Report"
+    },
+    {
+      "abbreviation": "P&W",
+      "full_form": "Pratt & Whitney (US)"
+    },
+    {
+      "abbreviation": "P&WC",
+      "full_form": "Pratt & Whitney Canada"
+    },
+    {
+      "abbreviation": "QN",
+      "full_form": "Quality Notification"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request For Action"
+    },
+    {
+      "abbreviation": "UTAS",
+      "full_form": "UTC Aerospace Systems"
+    }
+  ],
+  "OPMP_4_10_Mgmt_Devpt_Hardware_WEB.txt": [
+    {
+      "abbreviation": "DNA",
+      "full_form": "Development Application Network"
+    },
+    {
+      "abbreviation": "EMO",
+      "full_form": "Engineering Material Order"
+    },
+    {
+      "abbreviation": "HDWP",
+      "full_form": "Hardware Planning"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "ITC",
+      "full_form": "International Trade Compliance"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Program Introduction"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "PLM",
+      "full_form": "Product Life Cycle"
+    },
+    {
+      "abbreviation": "PMT",
+      "full_form": "Program Management Team"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "RFQ",
+      "full_form": "Request for Quote (Job Ticket)"
+    },
+    {
+      "abbreviation": "UB (German term)",
+      "full_form": "Internal Transfer Order from Plant to Plant"
+    },
+    {
+      "abbreviation": "USM",
+      "full_form": "User Supply / Supplied Material"
+    },
+    {
+      "abbreviation": "WBS",
+      "full_form": "Work Breakdown Structure"
+    }
+  ],
+  "OPMP_4_11_Mgmt_Prodn_Hardware_WEB.txt": [
+    {
+      "abbreviation": "BMC",
+      "full_form": "Bill of Material Change"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "NOP",
+      "full_form": "New Ops. Program (Independent SAP demand)"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Upgrade Plan"
+    },
+    {
+      "abbreviation": "OPE / OPA",
+      "full_form": "Operations Program Engineer / Analyst"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "PREQ",
+      "full_form": "Purchase Requisition"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "RFN",
+      "full_form": "Red Flag Notice"
+    },
+    {
+      "abbreviation": "LN",
+      "full_form": "Limit Notice"
+    }
+  ],
+  "OPMP_4_12_OEM_Hardware_Mgmt_WEB.txt": [
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "CQM",
+      "full_form": "Customer Quality Manager"
+    },
+    {
+      "abbreviation": "FSM",
+      "full_form": "Field Service Manager"
+    },
+    {
+      "abbreviation": "ITC",
+      "full_form": "International Trade Compliance"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OPE / OPA",
+      "full_form": "Operations Program Engineer / Analyst"
+    },
+    {
+      "abbreviation": "SB",
+      "full_form": "Service Bulletin"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Upgrade Plan"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OPMP",
+      "full_form": "Operations Program Management Procedure"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "RMA",
+      "full_form": "Return Material Authorization"
+    },
+    {
+      "abbreviation": "QMSP",
+      "full_form": "Quality Management System Procedure"
+    }
+  ],
+  "OPMP_4_14_Processing_Job_Order_Release_WEB.txt": [
+    {
+      "abbreviation": "CRPC",
+      "full_form": "Critical Rotating Part Committee"
+    },
+    {
+      "abbreviation": "CSL",
+      "full_form": "Canadian Salvage Layout"
+    },
+    {
+      "abbreviation": "EC",
+      "full_form": "Engineering Change"
+    },
+    {
+      "abbreviation": "ECID",
+      "full_form": "Engineering Change Information Data"
+    },
+    {
+      "abbreviation": "EOP",
+      "full_form": "Engineering Operating Procedure"
+    },
+    {
+      "abbreviation": "IP",
+      "full_form": "Intellectual Property"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "JOR",
+      "full_form": "Job Order Release"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer / Analyst (always inclusive)"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "SR&R",
+      "full_form": "Scrap, Rework & Repair"
+    }
+  ],
+  "OPMP_4_15_Application_JOR_at_OEM_WEB.txt": [
+    {
+      "abbreviation": "BMC",
+      "full_form": "Bill of Material Change"
+    },
+    {
+      "abbreviation": "EBU",
+      "full_form": "Engine Build Unit"
+    },
+    {
+      "abbreviation": "EC",
+      "full_form": "Engineering Change"
+    },
+    {
+      "abbreviation": "FIR",
+      "full_form": "Full Inspection Release"
+    },
+    {
+      "abbreviation": "FPS",
+      "full_form": "Finished Part Stores"
+    },
+    {
+      "abbreviation": "FSR",
+      "full_form": "Field Service Representative"
+    },
+    {
+      "abbreviation": "IPPS",
+      "full_form": "Integrated Power Plant System"
+    },
+    {
+      "abbreviation": "JOR",
+      "full_form": "Job Order Request"
+    },
+    {
+      "abbreviation": "LRU",
+      "full_form": "Line Replacement Unit"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "OEM Engine Upgrade Program"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "RFT",
+      "full_form": "Request for Tooling"
+    },
+    {
+      "abbreviation": "RTS",
+      "full_form": "Return to Stores"
+    }
+  ],
+  "OPMP_4_16_Customs_Value_for_Repaired_Part_Shipment_WEB.txt": [
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Upgrade"
+    },
+    {
+      "abbreviation": "RMA",
+      "full_form": "Return Material Authorization"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "CO/EC",
+      "full_form": "Change Order/ Engineering Change"
+    },
+    {
+      "abbreviation": "S.O.",
+      "full_form": "Sales Order"
+    },
+    {
+      "abbreviation": "FBO",
+      "full_form": "Fixed Base Operator"
+    },
+    {
+      "abbreviation": "Customs",
+      "full_form": "Value for Hardware"
+    }
+  ],
+  "OPMP_4_7_OEM_Returned_Parts_Approval_WEB.txt": [
+    {
+      "abbreviation": "IMF",
+      "full_form": "Integrated Material Flow"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    }
+  ],
+  "OPMP_1_7_Progm_Dashboard_WEB.txt": [
+    {
+      "abbreviation": "ENG",
+      "full_form": "Engineering"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Manager"
+    },
+    {
+      "abbreviation": "MFG",
+      "full_form": "Manufacturing"
+    },
+    {
+      "abbreviation": "BOM",
+      "full_form": "Bill of Materials"
+    },
+    {
+      "abbreviation": "KPI",
+      "full_form": "Key Performance Indicators"
+    }
+  ],
+  "OPMP_3_10_Industrialization_P0_P2_WEB.txt": [
+    {
+      "abbreviation": "CAR",
+      "full_form": "Capital Acquisition Request"
+    },
+    {
+      "abbreviation": "CBN",
+      "full_form": "Cost Basis Note"
+    },
+    {
+      "abbreviation": "CDR",
+      "full_form": "Critical Design Review"
+    },
+    {
+      "abbreviation": "DPM",
+      "full_form": "Digital Product Management"
+    },
+    {
+      "abbreviation": "EIS",
+      "full_form": "Entry Into Service"
+    },
+    {
+      "abbreviation": "FER",
+      "full_form": "First Engine Run"
+    },
+    {
+      "abbreviation": "FSC",
+      "full_form": "Factory Standard Cost"
+    },
+    {
+      "abbreviation": "I.Os",
+      "full_form": "Internal Orders"
+    },
+    {
+      "abbreviation": "LLT",
+      "full_form": "Long Lead Time"
+    },
+    {
+      "abbreviation": "MPI",
+      "full_form": "Marketing Proposal Inquiry"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Product Introduction"
+    },
+    {
+      "abbreviation": "NRE Non",
+      "full_form": "Recurring Expenses"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "PDR",
+      "full_form": "Preliminary Design Review"
+    },
+    {
+      "abbreviation": "PDRS",
+      "full_form": "Product Design Requirement Specifications"
+    },
+    {
+      "abbreviation": "RFI",
+      "full_form": "Request for Information"
+    },
+    {
+      "abbreviation": "RFP",
+      "full_form": "Request for Proposal"
+    },
+    {
+      "abbreviation": "ROM",
+      "full_form": "Rough order of magnitude"
+    },
+    {
+      "abbreviation": "SFV",
+      "full_form": "Strategic Financial Valuation"
+    },
+    {
+      "abbreviation": "UPPAP",
+      "full_form": "United Technologies Production Part Approval Process"
+    }
+  ],
+  "OPMP_3_11_Industrialization_P2_to_EIS_WEB.txt": [
+    {
+      "abbreviation": "AFS",
+      "full_form": "Assembly Floor Sheet"
+    },
+    {
+      "abbreviation": "APU",
+      "full_form": "Auxiliary Power Unit"
+    },
+    {
+      "abbreviation": "AQP",
+      "full_form": "Airworthiness Quality Plan"
+    },
+    {
+      "abbreviation": "A&T",
+      "full_form": "Assembly and Test"
+    },
+    {
+      "abbreviation": "BS",
+      "full_form": "Build Specification"
+    },
+    {
+      "abbreviation": "CAR",
+      "full_form": "Capital Acquisition Request"
+    },
+    {
+      "abbreviation": "CBN",
+      "full_form": "Cost Basis Note"
+    },
+    {
+      "abbreviation": "CBOM",
+      "full_form": "Concept Bill Of Material"
+    },
+    {
+      "abbreviation": "CIFER",
+      "full_form": "Configuration Identification For Experimental Requirements"
+    },
+    {
+      "abbreviation": "CMM",
+      "full_form": "Configuration Management Manual"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order (formally EC)"
+    },
+    {
+      "abbreviation": "CR",
+      "full_form": "Change Request (formally eRFC)"
+    },
+    {
+      "abbreviation": "DBOM",
+      "full_form": "Development Bill Of Material"
+    },
+    {
+      "abbreviation": "DID",
+      "full_form": "Design Intent Document (formally Interim Design Release)"
+    },
+    {
+      "abbreviation": "DP",
+      "full_form": "Design Project (formally Design Job)"
+    },
+    {
+      "abbreviation": "DPM",
+      "full_form": "Digital Product Management"
+    },
+    {
+      "abbreviation": "DR",
+      "full_form": "Discrepancy Report"
+    },
+    {
+      "abbreviation": "DTIS",
+      "full_form": "Development Test Information System"
+    },
+    {
+      "abbreviation": "EBOM",
+      "full_form": "Engineering Bill Of Material"
+    },
+    {
+      "abbreviation": "EIS",
+      "full_form": "Entry Into Service"
+    },
+    {
+      "abbreviation": "EMO",
+      "full_form": "Engineering Material Order"
+    },
+    {
+      "abbreviation": "EMWO",
+      "full_form": "Engineering Material Work Order"
+    },
+    {
+      "abbreviation": "ESA",
+      "full_form": "Engineering Source Approval"
+    },
+    {
+      "abbreviation": "ESK",
+      "full_form": "Engineering Sketch"
+    },
+    {
+      "abbreviation": "FAA",
+      "full_form": "Federal Aviation Administration (USA)"
+    },
+    {
+      "abbreviation": "FSC",
+      "full_form": "Factory Standard Cost"
+    },
+    {
+      "abbreviation": "FSR",
+      "full_form": "Field Service Representative"
+    },
+    {
+      "abbreviation": "I.O.",
+      "full_form": "Internal Order"
+    },
+    {
+      "abbreviation": "IPEC",
+      "full_form": "Intellectual Property and Export Control"
+    },
+    {
+      "abbreviation": "IPPS",
+      "full_form": "Integrated Power Plant System"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "ITC",
+      "full_form": "International Trade Compliance"
+    },
+    {
+      "abbreviation": "MA",
+      "full_form": "Manufacturing Approval"
+    },
+    {
+      "abbreviation": "MPI",
+      "full_form": "Market Proposal Inquiry"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Product Introduction"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Uprade Plan"
+    },
+    {
+      "abbreviation": "OPE / OPA",
+      "full_form": "Operations Program Engineer / Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OPMP",
+      "full_form": "Operations Program Management Procedure"
+    },
+    {
+      "abbreviation": "OPMWI OPM",
+      "full_form": "Work Instruction"
+    },
+    {
+      "abbreviation": "POA",
+      "full_form": "Product Organizational Approval"
+    },
+    {
+      "abbreviation": "PCOR",
+      "full_form": "Program Customer Operations Revie"
+    },
+    {
+      "abbreviation": "PFMEA",
+      "full_form": "Process Failure Mode Effect Analysis"
+    },
+    {
+      "abbreviation": "POC",
+      "full_form": "Parts of Concern"
+    },
+    {
+      "abbreviation": "PLM",
+      "full_form": "Product Lifecycle Management"
+    },
+    {
+      "abbreviation": "PMT",
+      "full_form": "Product Management Team"
+    },
+    {
+      "abbreviation": "QRA",
+      "full_form": "A Quarantine Release Authorisation for Assembly"
+    },
+    {
+      "abbreviation": "RT",
+      "full_form": "Engineering Request for Test"
+    },
+    {
+      "abbreviation": "SFV",
+      "full_form": "Strategic Financial Valuation"
+    },
+    {
+      "abbreviation": "TATP",
+      "full_form": "Temporary Assembly and Test Procedure"
+    },
+    {
+      "abbreviation": "UPPAP",
+      "full_form": "United Technologies Production Part Approval Process"
+    },
+    {
+      "abbreviation": "XSK",
+      "full_form": "Experimental Sketch"
+    }
+  ],
+  "OPMP_3_12_Legacy_Progm_Mgmt_WEB.txt": [
+    {
+      "abbreviation": "BOM",
+      "full_form": "Bill of Material"
+    },
+    {
+      "abbreviation": "BS",
+      "full_form": "Build Specification"
+    },
+    {
+      "abbreviation": "CO",
+      "full_form": "Change Order"
+    },
+    {
+      "abbreviation": "EASA",
+      "full_form": "European Aviations Safety Agency"
+    },
+    {
+      "abbreviation": "GWT",
+      "full_form": "Global Work Transition"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "KPI",
+      "full_form": "Key Performance Indicators"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipment Manufacturer"
+    },
+    {
+      "abbreviation": "OEUP",
+      "full_form": "Original Equipment Upgrade Plan"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OPMP",
+      "full_form": "Operations Program Management Procedure"
+    },
+    {
+      "abbreviation": "OPR",
+      "full_form": "Operations Programs Review"
+    },
+    {
+      "abbreviation": "ORM",
+      "full_form": "Operations Review Meeting"
+    },
+    {
+      "abbreviation": "PCOR",
+      "full_form": "Program Customer Operations Review"
+    },
+    {
+      "abbreviation": "PMT",
+      "full_form": "Program Management Team"
+    },
+    {
+      "abbreviation": "PMMT",
+      "full_form": "Program Model Management Team"
+    },
+    {
+      "abbreviation": "QMSP",
+      "full_form": "Quality Management System Procedure"
+    },
+    {
+      "abbreviation": "QS&P",
+      "full_form": "Quality Systems & Processes"
+    },
+    {
+      "abbreviation": "RECO",
+      "full_form": "Return Engine Change Order"
+    },
+    {
+      "abbreviation": "RFN",
+      "full_form": "Red Flag Notice"
+    },
+    {
+      "abbreviation": "SAP",
+      "full_form": "System Application Programming"
+    },
+    {
+      "abbreviation": "SI&OP",
+      "full_form": "Sales, Inventory and Operations Planning"
+    },
+    {
+      "abbreviation": "SSEQ",
+      "full_form": "Special Supply Chain Engine Query"
+    },
+    {
+      "abbreviation": "TLM",
+      "full_form": "Thursday Leadership Meeting"
+    }
+  ],
+  "OPMP_3_1_Coord_Manfg_Approval_WEB.txt": [
+    {
+      "abbreviation": "OPE / OPA",
+      "full_form": "Operations Program Engineer/Analyst"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "Pre",
+      "full_form": "Production Engine - Engines shipped from production prior to TCCA granting of"
+    },
+    {
+      "abbreviation": "Program Level 1 Plan",
+      "full_form": "Milestone plan listing all major program activities"
+    },
+    {
+      "abbreviation": "QMSP",
+      "full_form": "Quality Management System Procedure"
+    },
+    {
+      "abbreviation": "TCCA",
+      "full_form": "Transport Canada Civil Aviation Marketing Proposal Inquiry"
+    }
+  ],
+  "OPMP_3_3_Product_Producibility_WEB.txt": [
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer/Controller"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OPMP",
+      "full_form": "Operations Program Management Procedure"
+    },
+    {
+      "abbreviation": "QN",
+      "full_form": "Quality Notification"
+    },
+    {
+      "abbreviation": "ProCert",
+      "full_form": "Process Certification"
+    },
+    {
+      "abbreviation": "ZNC",
+      "full_form": "Zero Non Conformance"
+    }
+  ],
+  "OPMP_3_6_Process_Certif_for_Progms_WEB.txt": [
+    {
+      "abbreviation": "AFS",
+      "full_form": "Assembly Floor Sheet"
+    },
+    {
+      "abbreviation": "AMPC",
+      "full_form": "Advanced Materials Planning & Control"
+    },
+    {
+      "abbreviation": "CAB",
+      "full_form": "Corrective Action Board for component producers"
+    },
+    {
+      "abbreviation": "CP",
+      "full_form": "Process capability"
+    },
+    {
+      "abbreviation": "CPk",
+      "full_form": "Process capability including alignment to nominal"
+    },
+    {
+      "abbreviation": "CTQ Matrix",
+      "full_form": "Matrix that lists CTQ criteria versus CTQ parts"
+    },
+    {
+      "abbreviation": "CTQ",
+      "full_form": "Critical to quality"
+    },
+    {
+      "abbreviation": "Current Part",
+      "full_form": "Part that is being replaced by hardware ordered on risk"
+    },
+    {
+      "abbreviation": "EC",
+      "full_form": "Engineering Change"
+    },
+    {
+      "abbreviation": "EMO",
+      "full_form": "Engineering Material Order"
+    },
+    {
+      "abbreviation": "IO",
+      "full_form": "Internal Order"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "KPC",
+      "full_form": "Key Product Characteristic"
+    },
+    {
+      "abbreviation": "KPC1",
+      "full_form": "Safety related KPC"
+    },
+    {
+      "abbreviation": "KPC2",
+      "full_form": "Program related KPC"
+    },
+    {
+      "abbreviation": "KPCd",
+      "full_form": "Design KPC"
+    },
+    {
+      "abbreviation": "Export",
+      "full_form": "Classification"
+    },
+    {
+      "abbreviation": "Operations",
+      "full_form": "Program"
+    },
+    {
+      "abbreviation": "Management",
+      "full_form": "Procedure"
+    },
+    {
+      "abbreviation": "05",
+      "full_form": "June 2013"
+    },
+    {
+      "abbreviation": "KPC",
+      "full_form": "L - Key Product Characteristic List for Supplier Designed Components"
+    },
+    {
+      "abbreviation": "KPCm",
+      "full_form": "Manufacturing KPC"
+    },
+    {
+      "abbreviation": "KPI",
+      "full_form": "Key Process Input"
+    },
+    {
+      "abbreviation": "KPO",
+      "full_form": "Key Process Output"
+    },
+    {
+      "abbreviation": "Level 1 to 4",
+      "full_form": "Process Certification System Rating for producers"
+    },
+    {
+      "abbreviation": "MOS",
+      "full_form": "Manufacturing Operations Sheet"
+    },
+    {
+      "abbreviation": "New Part",
+      "full_form": "Part that is being ordered on risk"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Part Introduction"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer/Controller"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "PDS",
+      "full_form": "Product Definition Services"
+    },
+    {
+      "abbreviation": "P",
+      "full_form": "FMEA - Process Failure Modes and Effects Analysis"
+    },
+    {
+      "abbreviation": "PMT",
+      "full_form": "Program Management Team"
+    },
+    {
+      "abbreviation": "PO",
+      "full_form": "Purchase Order"
+    },
+    {
+      "abbreviation": "PREQ",
+      "full_form": "Purchase Requisition"
+    },
+    {
+      "abbreviation": "RFA",
+      "full_form": "Request for Action"
+    },
+    {
+      "abbreviation": "TDBD",
+      "full_form": "Top Down Breakdown List"
+    },
+    {
+      "abbreviation": "WBS",
+      "full_form": "Work Breakdown Structure"
+    },
+    {
+      "abbreviation": "ZNC",
+      "full_form": "Zero Non-conformances to definition"
+    }
+  ],
+  "OPMP_3_8_Prodn_Readiness_Process_WEB.txt": [
+    {
+      "abbreviation": "P2.7",
+      "full_form": "Passport 2.7 Supply Chain Readiness review"
+    },
+    {
+      "abbreviation": "SCL",
+      "full_form": "Supply Chain Leader"
+    },
+    {
+      "abbreviation": "MLM",
+      "full_form": "Manufacturing Line Manager"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    }
+  ],
+  "OPMP_2_10_OPM_Annual_Budget_Mgmt_WEB.txt": [
+    {
+      "abbreviation": "CAR",
+      "full_form": "Capital Appropriation Request"
+    },
+    {
+      "abbreviation": "MML",
+      "full_form": "Monthly Management Letter"
+    },
+    {
+      "abbreviation": "NPI",
+      "full_form": "New Product Introduction"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    }
+  ],
+  "OPMP_1_10_Progm_Mgmt_Comm_WEB.txt": [
+    {
+      "abbreviation": "CQM",
+      "full_form": "Customer Quality Management"
+    },
+    {
+      "abbreviation": "FSC",
+      "full_form": "Factory Standard Cost"
+    },
+    {
+      "abbreviation": "IMF",
+      "full_form": "Integrated Material Flow"
+    },
+    {
+      "abbreviation": "IPT",
+      "full_form": "Integrated Product Team"
+    },
+    {
+      "abbreviation": "KPU",
+      "full_form": "Key Program Updates"
+    },
+    {
+      "abbreviation": "OEM",
+      "full_form": "Original Equipement Manufacturer"
+    },
+    {
+      "abbreviation": "OPA",
+      "full_form": "Operations Program Analyst"
+    },
+    {
+      "abbreviation": "OPE",
+      "full_form": "Operations Program Engineer"
+    },
+    {
+      "abbreviation": "OPM",
+      "full_form": "Operations Program Management"
+    },
+    {
+      "abbreviation": "OTD",
+      "full_form": "On Time Delivery"
+    },
+    {
+      "abbreviation": "Program",
+      "full_form": "Management"
+    },
+    {
+      "abbreviation": "PCOR",
+      "full_form": "Program Customer Operations Review"
+    },
+    {
+      "abbreviation": "PMMT",
+      "full_form": "Program Model Management Team"
+    },
+    {
+      "abbreviation": "PMT",
+      "full_form": "Program Management Team"
+    },
+    {
+      "abbreviation": "ROS",
+      "full_form": "Return On Sales"
+    },
+    {
+      "abbreviation": "SI&OP",
+      "full_form": "Sales, Inventory, and Operations Planning"
+    },
+    {
+      "abbreviation": "SM",
+      "full_form": "Supply Management"
+    },
+    {
+      "abbreviation": "STOA",
+      "full_form": "Support to Other Areas"
+    },
+    {
+      "abbreviation": "TLM",
+      "full_form": "Thursday Leadership Meeting"
+    }
+  ]
+}
