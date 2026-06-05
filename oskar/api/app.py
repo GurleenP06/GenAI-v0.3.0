@@ -1,83 +1,66 @@
-"""OSKAR API - FastAPI application."""
+"""Session routes - user registration and interaction logging."""
 
+import uuid
 import logging
-from pathlib import Path
-from contextlib import asynccontextmanager
+from datetime import datetime
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+from fastapi import APIRouter
 
+from oskar.api.schemas import RegisterSessionRequest, LogInteractionRequest
 from oskar.repositories.chat_repository import get_repository
+from oskar.config import DEFAULT_MODEL
 
 logger = logging.getLogger(__name__)
 
+router = APIRouter()
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    logger.info("=" * 60)
-    logger.info("OSKAR STARTUP (Ollama Edition)")
-    logger.info("=" * 60)
 
-    try:
-        from oskar.services.model_service import initialize
-        initialize()
-        logger.info("OSKAR initialized successfully!")
-    except Exception as e:
-        logger.error(f"Initialization warning: {e}")
-        logger.info("OSKAR will start, but some features may not work.")
-
+@router.post("/register_session/")
+async def register_session(request: RegisterSessionRequest):
+    session_id = str(uuid.uuid4())
     repo = get_repository()
-    data_dir = Path("./chat_data")
-    for file in data_dir.glob("export_*.*"):
-        if file.is_file():
-            try:
-                file.unlink()
-            except:
-                pass
 
-    logger.info("=" * 60)
-    logger.info("OSKAR READY - Accepting requests")
-    logger.info("=" * 60)
+    # Create chat session (same as new_chat)
+    repo.chat_sessions[session_id] = {
+        "summary": "",
+        "messages": [],
+        "assistant_type": "general",
+        "model": DEFAULT_MODEL,
+    }
 
-    yield
+    repo.chat_metadata[session_id] = {
+        "session_id": session_id,
+        "name": "New Chat",
+        "project_id": None,
+        "is_favorite": False,
+        "created_at": datetime.now().isoformat(),
+        "updated_at": datetime.now().isoformat(),
+        "assistant_type": "general",
+        "model": DEFAULT_MODEL,
+        "user_name": request.name,
+        "user_role": request.role,
+    }
+    repo.save_chats()
 
-    logger.info("OSKAR SHUTDOWN")
+    # Create session log
+    repo.create_session_log(session_id, request.name, request.role)
+
+    logger.info(f"Session registered: {session_id} for {request.name} ({request.role})")
+
+    return {"session_id": session_id, "name": request.name, "role": request.role}
 
 
-def create_app() -> FastAPI:
-    app = FastAPI(
-        title="OSKAR API",
-        description="Operations Support Knowledge Assistant with RAG + RLPM",
-        version="2.1.0-ollama",
-        lifespan=lifespan
+@router.post("/log_interaction/")
+async def log_interaction(request: LogInteractionRequest):
+    repo = get_repository()
+
+    repo.append_interaction(
+        session_id=request.session_id,
+        question=request.question,
+        response_preview=request.response,
+        response_time_ms=request.response_time_ms,
+        assistant_type=request.assistant_type,
+        model=request.model,
     )
 
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
-
-    # Register routers
-    from oskar.api.routes import chat, projects, models, documents, rlpm, health, ratings, sessions
-    app.include_router(chat.router)
-    app.include_router(projects.router)
-    app.include_router(models.router)
-    app.include_router(documents.router)
-    app.include_router(rlpm.router)
-    app.include_router(health.router)
-    app.include_router(ratings.router)
-    app.include_router(sessions.router)
-
-    # Serve static files
-    static_dir = Path(__file__).parent.parent.parent / "static"
-    if static_dir.exists():
-        app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
-
-    return app
-
-
-app = create_app()
+    return {"status": "logged"}
