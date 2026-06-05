@@ -13,6 +13,7 @@ from oskar.api.schemas import (
     MoveToProjectRequest,
     ToggleFavoriteRequest,
     ChatHistoryRequest,
+    NewChatRequest,
 )
 from oskar.repositories.chat_repository import get_repository
 from oskar.config import DEFAULT_MODEL
@@ -24,7 +25,10 @@ router = APIRouter()
 
 
 @router.post("/new_chat/")
-async def new_chat(project_id: Optional[str] = None):
+async def new_chat(request: NewChatRequest = None):
+    if request is None:
+        request = NewChatRequest()
+
     session_id = str(uuid.uuid4())
     repo = get_repository()
 
@@ -38,14 +42,24 @@ async def new_chat(project_id: Optional[str] = None):
     repo.chat_metadata[session_id] = {
         "session_id": session_id,
         "name": "New Chat",
-        "project_id": project_id,
+        "project_id": request.project_id,
         "is_favorite": False,
         "created_at": datetime.now().isoformat(),
         "updated_at": datetime.now().isoformat(),
         "assistant_type": "general",
         "model": DEFAULT_MODEL,
+        "user_name": request.user_name or "Unknown",
+        "user_role": request.user_role or "Unknown",
     }
     repo.save_chats()
+
+    # Also create a session log entry with user info
+    repo.create_session_log(
+        session_id,
+        request.user_name or "Unknown",
+        request.user_role or "Unknown",
+    )
+
     return {"session_id": session_id, "metadata": repo.chat_metadata[session_id]}
 
 
