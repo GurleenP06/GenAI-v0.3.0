@@ -47,9 +47,17 @@ class ChatHistoryRequest(BaseModel):
 
 
 class RatingRequest(BaseModel):
+    session_id: str
     question: str
     response: str
-    rating: int
+    sentiment: str  # "positive" or "negative"
+    star_rating: int  # 1-5 overall
+    scoring_parameters: Optional[Dict[str, int]] = None  # accuracy, relevance, completeness, conciseness (1-5 each)
+    reasons: List[str] = []
+    feedback_text: str = ""
+    citations: Optional[Dict] = None
+    assistant_type: Optional[str] = None
+    model: Optional[str] = None
 
 
 class DocumentViewRequest(BaseModel):
@@ -65,6 +73,13 @@ class ModelChangeRequest(BaseModel):
 class RegisterSessionRequest(BaseModel):
     name: str
     role: str
+
+
+class NewChatRequest(BaseModel):
+    project_id: Optional[str] = None
+    user_name: Optional[str] = None
+    user_role: Optional[str] = None
+
 
 class LogInteractionRequest(BaseModel):
     session_id: str
