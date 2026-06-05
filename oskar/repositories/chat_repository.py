@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import List, Dict, Optional
 
 DATA_DIR = Path("./chat_data")
 DATA_DIR.mkdir(exist_ok=True)
@@ -43,6 +44,7 @@ class ChatRepository:
             json.dump(self.chat_metadata, f, indent=4)
 
     def save_rating(self, question: str, response: str, rating: int):
+        """Legacy method - kept for backward compatibility."""
         with open(RATINGS_FILE, "r") as f:
             ratings = json.load(f)
 
@@ -55,6 +57,52 @@ class ChatRepository:
 
         with open(RATINGS_FILE, "w") as f:
             json.dump(ratings, f, indent=4)
+
+    def save_detailed_rating(
+        self,
+        session_id: str,
+        question: str,
+        response: str,
+        sentiment: str,
+        star_rating: int,
+        scoring_parameters: Optional[Dict] = None,
+        reasons: List[str] = None,
+        feedback_text: str = "",
+        citations: Optional[Dict] = None,
+        assistant_type: Optional[str] = None,
+        model: Optional[str] = None,
+    ):
+        """Save detailed feedback with sentiment, scoring parameters, reasons, and sources."""
+        with open(RATINGS_FILE, "r") as f:
+            ratings = json.load(f)
+
+        ratings.append({
+            "session_id": session_id,
+            "question": question,
+            "response": response,
+            "sentiment": sentiment,
+            "star_rating": star_rating,
+            "scoring_parameters": scoring_parameters or {},
+            "reasons": reasons or [],
+            "feedback_text": feedback_text,
+            "citations": citations or {},
+            "assistant_type": assistant_type,
+            "model": model,
+            "timestamp": datetime.now().isoformat(),
+        })
+
+        with open(RATINGS_FILE, "w") as f:
+            json.dump(ratings, f, indent=4)
+
+        # Also update the session log interaction rating
+        if session_id and question:
+            self.update_interaction_rating(session_id, question, {
+                "sentiment": sentiment,
+                "star_rating": star_rating,
+                "scoring_parameters": scoring_parameters or {},
+                "reasons": reasons or [],
+                "feedback_text": feedback_text,
+            })
 
     def load_session_logs(self):
         try:
@@ -80,9 +128,13 @@ class ChatRepository:
     def append_interaction(self, session_id, question, response_preview, response_time_ms, assistant_type=None, model=None):
         logs = self.load_session_logs()
         if session_id not in logs:
+            # Pull user info from chat_metadata if available
+            meta = self.chat_metadata.get(session_id, {})
+            user_name = meta.get("user_name", "Unknown")
+            user_role = meta.get("user_role", "Unknown")
             logs[session_id] = {
-                "user_name": "Unknown",
-                "user_role": "Unknown",
+                "user_name": user_name,
+                "user_role": user_role,
                 "started_at": datetime.now().isoformat(),
                 "interactions": []
             }
